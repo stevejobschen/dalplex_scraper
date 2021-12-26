@@ -32,7 +32,8 @@ for category in categorys:
     rawTimeSpots = category.find("small").get_text().strip()
     time = rawTimeSpots.split("\r")[0]
     spots = rawTimeSpots.split("\n")[2]
-    print(spots)
+    link= category.find("a")['onclick']
+    print(link)
 
     # linkDictionary.update({title.get_text():link.get('onclick').split("?",1)[1]})
 
