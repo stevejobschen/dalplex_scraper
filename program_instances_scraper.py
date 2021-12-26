@@ -30,8 +30,10 @@ linkDictionary = {}
 
 for category in categorys:
     date = category.find("label", {"class": "program-schedule-card-header"}).get_text().strip()
-    time = category.find("small").get_text().strip()
-    print(time)
+    rawTimeSpots = category.find("small").get_text().strip()
+    time = rawTimeSpots.split("\r")[0]
+    spots = rawTimeSpots.split("\n")[2]
+    print(spots)
     # title = category.find("h3", {"class": "TitleText-SP"})
     # linkDictionary.update({title.get_text():link.get('onclick').split("?",1)[1]})
 
