@@ -12,7 +12,6 @@ def CsvWriterStop(f):
 def CsvWriter(contentDictionary):
     f=CsvWriterStart("programs.csv","title;courseId;semesterId\n")
     for i in contentDictionary:
-        i
         courseId = contentDictionary[i][9:45]
         semesterId = contentDictionary[i][57:93]
         f.write(i + ";" + courseId+";"+semesterId+";"+"\n")
@@ -34,7 +33,7 @@ for category in categorys:
     time = rawTimeSpots.split("\r")[0]
     spots = rawTimeSpots.split("\n")[2]
     print(spots)
-    # title = category.find("h3", {"class": "TitleText-SP"})
+
     # linkDictionary.update({title.get_text():link.get('onclick').split("?",1)[1]})
 
 #save to CSV
